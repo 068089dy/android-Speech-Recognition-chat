@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 //import android.widget.EditText;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,6 +24,9 @@ public class MainActivity extends AppCompatActivity{
     private TextView tx1;
     private TextView mVolume;
     private Button begin;
+    private EditText ipedit;
+    String ip;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +36,13 @@ public class MainActivity extends AppCompatActivity{
 
         initData();
         initRecognizer();
+        begin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mRecognizer.start();
+                //Toast.makeText(MainActivity.this, "begin", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
     /**
      * 初始化识别
@@ -47,6 +58,9 @@ public class MainActivity extends AppCompatActivity{
             public void onResult(String result, boolean isLast) {
                 // 识别结果实时返回,保留识别结果组成完整的识别内容。
                 tx1.setText(result);
+                ip = ipedit.getText().toString();
+                MyThread tt = new MyThread(0,ip,result);
+                tt.start();
             }
             public void onEnd(USCError error) {
                 //识别结束
@@ -88,13 +102,7 @@ public class MainActivity extends AppCompatActivity{
         tx1 = (TextView) findViewById(R.id.tx1);
         mVolume = (TextView) findViewById(R.id.mVolume);
         begin = (Button) findViewById(R.id.beginbt);
-        begin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mRecognizer.start();
-                //Toast.makeText(MainActivity.this, "begin", Toast.LENGTH_SHORT).show();
-            }
-        });
+        ipedit = (EditText) findViewById(R.id.ipedit);
     }
 
 }

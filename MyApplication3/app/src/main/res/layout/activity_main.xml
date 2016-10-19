@@ -10,15 +10,11 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.ding.myapplication.MainActivity">
 
-    <TextView
-        android:id="@+id/tx1"
-        android:layout_width="match_parent"
-        android:layout_height="100px"
-        android:text="从这里输出" />
     <EditText
         android:id="@+id/ipedit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="请输入ip"
         />
     <Button
         android:id="@+id/beginbt"
@@ -26,11 +22,18 @@
         android:layout_height="wrap_content"
         android:text="开始识别"
         />
-    <TextView
-        android:id="@+id/tx2"
+    <Button
+        android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:layout_height="50px"
-        android:text="发送指令"
+        android:id="@+id/stop"
+        android:text="暂停"
+        />
+    <Button
+        android:id="@+id/back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="停止并返回主界面"/>
+
         />
     <TextView
         android:id="@+id/mVolume"
@@ -38,4 +41,14 @@
         android:layout_height="50px"
         android:text="音量"
         />
+    <ProgressBar
+        android:id="@+id/mVolume_pro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="?android:attr/progressBarStyleHorizontal"/>
+    <TextView
+        android:id="@+id/tx1"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:text="从这里输出" />
 </LinearLayout>

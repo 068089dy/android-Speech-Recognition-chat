@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         sList = new LinkedList<PeopleStudentBean>();
         tList = new LinkedList<PeopleTeacherBean>();
         beans = new LinkedList<Bean>();
-        String[] msg = new String[]{"asd","ergerterter","qwe","wrweqwreqw","asdasfafdafd","sdaasdasd","asdasdasdas","asfwewer"};
+        /*String[] msg = new String[]{"asd","ergerterter","qwe","wrweqwreqw","asdasfafdafd","sdaasdasd","asdasdasdas","asfwewer"};
 
         // 0 是教师； 1 是学生
 		for (int i = 0; i < 4; i++) {
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
             beans.add(sList.get(j));
             beans.add(tList.get(j));
-        }
+        }*/
         setContentView(R.layout.activity_main);
         initViewsMethod();
         onHandleMethod();

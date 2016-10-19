@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.a068089dy.im_practice1">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".data.Globaldata"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="登陆"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity"
+            android:label="好友列表"></activity>
+        <activity android:name=".loginactivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ChatActivity"
+            android:label="聊天"></activity>
+    </application>
+
+</manifest>

@@ -14,11 +14,10 @@ import java.net.Socket;
 public class MyThread extends Thread {
     String ip;
     String send;
-    int num;
-    public MyThread(int num,String ip,String send) {
+
+    public MyThread(String ip,String send) {
         this.ip = ip;
         this.send = send;
-        this.num = num;
     }
     public void run() {
         try{

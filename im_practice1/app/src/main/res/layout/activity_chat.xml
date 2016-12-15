@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#c255f9"
+
     tools:context="com.example.a068089dy.im_practice1.ChatActivity">
 
     <ListView

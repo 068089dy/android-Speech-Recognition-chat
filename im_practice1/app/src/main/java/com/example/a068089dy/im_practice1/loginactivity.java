@@ -14,6 +14,7 @@ import com.example.a068089dy.im_practice1.common.Storage;
 import com.example.a068089dy.im_practice1.common.XMPPUtil;
 import com.example.a068089dy.im_practice1.data.DataWarehouse;
 import com.example.a068089dy.im_practice1.data.Logindata;
+import com.example.a068089dy.im_practice1.data.XMPP_data;
 
 import org.jivesoftware.smack.XMPPConnection;
 
@@ -65,6 +66,7 @@ public class loginactivity extends AppCompatActivity implements Const{
 
             connection.login(mLoginData.username,mLoginData.passwd);
             DataWarehouse.setXMPPConnection(this,connection);
+            XMPP_data.connection = connection;
         }catch(Exception e){
             e.printStackTrace();
             return false;

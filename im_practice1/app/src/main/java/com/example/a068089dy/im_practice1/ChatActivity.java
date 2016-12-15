@@ -15,6 +15,7 @@ import com.example.a068089dy.im_practice1.ChatActivity_listview.MsgAdapter;
 import com.example.a068089dy.im_practice1.common.XMPPUtil;
 import com.example.a068089dy.im_practice1.data.DataWarehouse;
 import com.example.a068089dy.im_practice1.data.Logindata;
+import com.example.a068089dy.im_practice1.data.XMPP_data;
 
 import org.jivesoftware.smack.Chat;
 import org.jivesoftware.smack.ChatManager;
@@ -39,12 +40,12 @@ public class ChatActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
         initmsg();
-        new Thread(new Runnable() {
+        /*new Thread(new Runnable() {
             @Override
             public void run() {
                 login();
             }
-        }).start();
+        }).start();*/
         adapter = new MsgAdapter(ChatActivity.this,R.layout.msg_item,msgList);
         inputText = (EditText) findViewById(R.id.input_text);
         send = (Button) findViewById(R.id.send);
@@ -61,38 +62,29 @@ public class ChatActivity extends AppCompatActivity {
                     adapter.notifyDataSetChanged();//刷新listview
                     msgListView.setSelection(msgList.size());
                     inputText.setText("");
+                    try {
+                        sendTextMessage(XMPP_data.connection,"user1",content);
+                    }catch(Exception e){
+
+                    }
 
                 }
             }
         });
     }
 
-    //用于在线程中登陆的方法
-    private boolean login(){
-        try{
-            XMPPConnection connection = XMPPUtil.getXMPPConnection("123.207.174.226");
-            if(connection == null){
-                throw new Exception("connection error!");
-            }
-            connection.login("user2","123456");
-            sendTextMessage(connection);
-        }catch(Exception e){
-            e.printStackTrace();
-            return false;
-        }
-        return true;
-    }
+
     //发送文本
-    public static void sendTextMessage(XMPPConnection connection) throws Exception{
+    public void sendTextMessage(XMPPConnection connection,String username,String content) throws Exception{
         //ChatManager chatManager = connection.getUser();
-        Chat chat = ChatManager.getInstanceFor(connection).createChat("user1@123.207.174.226", new MessageListener() {
+        Chat chat = ChatManager.getInstanceFor(connection).createChat("user1@vm-124-97-ubuntu", new MessageListener() {
             public void processMessage(Chat chat, Message message) {
                 // Print out any messages we get back to standard out.
                 System.out.println("Received message: " + message);
                 Log.d("received","message!");
             }
         });
-        chat.sendMessage("Hi Test Send Message........!");
+        chat.sendMessage(content);
     }
 
 

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+
+    tools:context="com.example.im_practice2.MainActivity">
+    <FrameLayout
+        android:id="@+id/titlebar_main"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title_bg2"
+        android:orientation="horizontal" >
+
+
+
+
+        <TextView
+            android:id="@+id/titleView"
+            style="@style/white20Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="好友列表"
+            android:gravity="center"
+            android:layout_gravity="center" />
+        <ImageView
+            android:id="@+id/add_btn"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/add_btn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+
+
+
+    </FrameLayout>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="3dp"
+        android:paddingTop="3dp"
+
+        >
+    <ListView
+        android:id="@+id/friend_listview"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

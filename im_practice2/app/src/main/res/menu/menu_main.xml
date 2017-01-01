@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.dy.myapplication.MainActivity">
+    <item
+        android:id="@+id/add_friend"
+        android:orderInCategory="100"
+        android:title="add friend"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/remove_friend"
+        android:orderInCategory="100"
+        android:title="remove friend"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/clear_list"
+        android:orderInCategory="100"
+        android:title="clear_list"
+        app:showAsAction="never" />
+</menu>

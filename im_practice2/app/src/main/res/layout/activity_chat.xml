@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context="com.example.a068089dy.im_practice1.ChatActivity">
+    <FrameLayout
+        android:id="@+id/titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title_bg2"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/leftBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:padding="10dp"
+            android:src="@drawable/btn_back"
+            android:layout_gravity="center_vertical"/>
+
+
+        <TextView
+            android:id="@+id/titleView"
+            style="@style/white20Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="聊天"
+            android:gravity="center"
+            android:layout_gravity="center" />
+
+
+
+        <ImageView
+            android:id="@+id/rightBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:src="@drawable/buttom_btn_contacts_icon"
+            android:layout_gravity="center_vertical|right" />
+
+    </FrameLayout>
+    <ListView
+        android:id="@+id/msg_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="#0000">
+
+    </ListView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/input_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+        <Button
+            android:id="@+id/send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="send"
+            />
+    </LinearLayout>
+
+</LinearLayout>

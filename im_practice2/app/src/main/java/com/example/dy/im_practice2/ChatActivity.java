@@ -3,7 +3,6 @@ package com.example.dy.im_practice2;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
-import android.os.HandlerThread;
 import android.os.Message;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
@@ -11,26 +10,20 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
-import android.os.Bundle;
 import android.os.Handler;
-import android.os.Looper;
-import android.os.Message;
-import com.example.dy.im_practice2.ChatActivity_listview.Msg;
-import com.example.dy.im_practice2.ChatActivity_listview.MsgAdapter;
-import com.example.dy.im_practice2.data.FileListener;
+
+import com.example.dy.im_practice2.listview.ChatActivity_listview.Msg;
+import com.example.dy.im_practice2.listview.ChatActivity_listview.MsgAdapter;
 import com.example.dy.im_practice2.data.XMPP_data;
 
 import com.example.dy.im_practice2.receiver.LoccalReceiver;
 
-import org.jivesoftware.smack.AccountManager;
 import org.jivesoftware.smack.Chat;
-import org.jivesoftware.smack.MessageListener;
 import org.jivesoftware.smack.XMPPConnection;
 //import org.jivesoftware.smack.packet.Message;
 
@@ -58,6 +51,8 @@ public class ChatActivity extends AppCompatActivity implements View.OnClickListe
     private LoccalReceiver localReceiver;
     private LocalBroadcastManager localBroadcastManager;
     private String username;
+    private OnRefresh filerefresh = new OnRefresh();
+    private Boolean activity_isAlive = true;
 
     private Handler handler = new Handler(){
         public void handleMessage(Message msg){
@@ -85,17 +80,31 @@ public class ChatActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_chat);
 
 
-        FileListener listener = new FileListener("/data/data/");
-        //开始监听
-        listener.startWatching();
-        /*
-        * 在这里做一些操作，比如创建目录什么的
-        */
-        //停止监听
-        //listener.stopWatching();
+        FileInputStream in = null;
+        BufferedReader reader = null;
+        StringBuilder context = new StringBuilder();
+        String line1 = null;
+        try{
+            in = openFileInput(username);
+            reader = new BufferedReader(new InputStreamReader(in));
+            line1 = reader.readLine();
+            Log.d("line1",line1);
+        }catch(Exception e){
 
-        //onRefresh();
-        new OnRefresh().start();
+        }finally{
+            if(reader != null){
+                try{
+                    reader.close();
+                }catch(Exception e){
+                    try{
+                        reader.close();
+                    }catch(IOException e1){
+                        e1.printStackTrace();
+                    }
+                }
+            }
+        }
+        filerefresh.start();
         initview();
 
 
@@ -125,7 +134,7 @@ public class ChatActivity extends AppCompatActivity implements View.OnClickListe
     //发送文本
     public void sendTextMessage(XMPPConnection connection, String input, String username) throws Exception{
         //ChatManager chatManager = connection.getUser();
-        Chat chat = connection.getChatManager().createChat(username+"@vm-124-97-ubuntu",null);
+        Chat chat = connection.getChatManager().createChat(username+"@"+XMPP_data.connection.getServiceName(),null);
         chat.sendMessage(input);
     }
 
@@ -145,11 +154,8 @@ public class ChatActivity extends AppCompatActivity implements View.OnClickListe
             while((line = reader.readLine())!=null){
                 context.append(line);
             }
-
             save_message(username,context.toString());
             Log.d("save_message",context.toString());
-
-
         }catch(Exception e){
 
         }finally{
@@ -191,6 +197,11 @@ public class ChatActivity extends AppCompatActivity implements View.OnClickListe
         public void run() {
             try {
                 while(true) {
+                    if(activity_isAlive){
+
+                    }else{
+                        break;
+                    }
                     String data = readLine();
 
                     if(data == null || data == "") {
@@ -221,6 +232,7 @@ public class ChatActivity extends AppCompatActivity implements View.OnClickListe
                         Intent intent = getIntent();
                         username = intent.getStringExtra("username");
                         sendTextMessage(XMPP_data.connection, content, username);
+                        Log.d("send to",username+XMPP_data.connection.getServiceName());
                         Msg msg = new Msg(content, Msg.TYPE_SEND);
                         msgList.add(msg);
                         adapter.notifyDataSetChanged();//刷新listview
@@ -233,6 +245,7 @@ public class ChatActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 break;
             case R.id.leftBtn:
+                activity_isAlive = false;
                 finish();
                 break;
             default:
@@ -248,6 +261,8 @@ public class ChatActivity extends AppCompatActivity implements View.OnClickListe
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         // TODO Auto-generated method stub
         if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
+            activity_isAlive = false;
+
             finish();
         }
         return super.onKeyDown(keyCode, event);

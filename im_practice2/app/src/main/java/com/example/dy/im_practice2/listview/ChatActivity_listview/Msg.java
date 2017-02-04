@@ -1,4 +1,4 @@
-package com.example.dy.im_practice2.ChatActivity_listview;
+package com.example.dy.im_practice2.listview.ChatActivity_listview;
 
 /**
  * Created by 068089dy on 2016/10/17.

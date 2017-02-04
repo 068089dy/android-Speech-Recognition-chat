@@ -10,10 +10,10 @@ import android.util.Log;
 public class FileListener extends FileObserver {
 
     public FileListener(String path) {
-              /*
-               * 这种构造方法是默认监听所有事件的,如果使用 super(String,int)这种构造方法，
-               * 则int参数是要监听的事件类型.
-               */
+        /*
+         * 这种构造方法是默认监听所有事件的,如果使用 super(String,int)这种构造方法，
+         * 则int参数是要监听的事件类型.
+         */
         super(path);
     }
 

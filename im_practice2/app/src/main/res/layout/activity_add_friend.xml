@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:orientation="vertical"
+    tools:context="com.example.dy.impractice3.Add_friendActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/edit_search"
+            android:hint="搜索好友"
+            android:layout_width="wrap_content"
+            android:layout_weight="8"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btn_search"
+            android:layout_weight="1"
+            android:text="搜索"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        </LinearLayout>
+    <ListView
+        android:id="@+id/lv_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

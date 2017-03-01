@@ -1,0 +1,154 @@
+[
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/layout/acti_adr.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/layout/acti_adr.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/layout/acti_room_mem.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/layout/acti_room_mem.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/layout/acti_map.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/layout/acti_map.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/layout/morefooter.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/layout/morefooter.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/layout/acti_register.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/layout/acti_register.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/layout/acti_search.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/layout/acti_search.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/layout/acti_web1.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/layout/acti_web1.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/layout/acti_login.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/layout/acti_login.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/layout/grid.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/layout/grid.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/layout/singleexpression.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/layout/singleexpression.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/layout/acti_contacts.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/layout/acti_contacts.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/layout/acti_chose.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/layout/acti_chose.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/layout/dialog_group_message.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/layout/dialog_group_message.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/layout/expression_view.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/layout/expression_view.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/layout/acti_forget_pwd.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/layout/acti_forget_pwd.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/layout/singleexpression_gif.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/layout/singleexpression_gif.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/layout/row_msg.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/layout/row_msg.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/layout/head.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/layout/head.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/layout/gl_modify_avatar.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/layout/gl_modify_avatar.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/layout/acti_new_friend.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/layout/acti_new_friend.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/layout/acti_me.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/layout/acti_me.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/layout/row_contact.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/layout/row_contact.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/layout/row_chat.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/layout/row_chat.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/layout/acti_chat.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/layout/acti_chat.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/layout/dialog_loadding.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/layout/dialog_loadding.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/layout/acti_msg.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/layout/acti_msg.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/layout/acti_main.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/layout/acti_main.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/layout/dialog_item.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/layout/dialog_item.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/layout/activity_pic_picker.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/layout/activity_pic_picker.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/layout/row_room.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/layout/row_room.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/layout/acti_my_room.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/layout/acti_my_room.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/layout/acti_change_pwd.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/layout/acti_change_pwd.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/layout/acti_friend.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/layout/acti_friend.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/layout/row_search.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/layout/row_search.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/layout/acti_show_pic.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/layout/acti_show_pic.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/layout/acti_web.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/layout/acti_web.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/layout/line.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/layout/line.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/layout/row_chat_mine.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/layout/row_chat_mine.xml"
+    }
+]

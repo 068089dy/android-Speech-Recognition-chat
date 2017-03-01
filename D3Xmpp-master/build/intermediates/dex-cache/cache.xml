@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/home/dy/AndroidStudioProjects/D3Xmpp-master/app/libs/pinyin4j-2.5.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ae353005f973da1cd8545b54354504c2503f6865">
+        <dex dex="/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/transforms/dex/debug/folders/1000/2/pinyin4j-2.5.0_2fa925b8b3f1d9a26df26309a0bfd1bdfe3481d4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="53cb4a17c5d4c95f850e380ef5abdec49b36d8d5">
+        <dex dex="/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_a003b46d7235c699d7f53595a30620b1a5c62f11/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/dy/Android/Sdk/extras/android/m2repository/com/android/support/support-v4/18.0.0/support-v4-18.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="44ec51e9d395a47aab135e5e1b556c0007442156">
+        <dex dex="/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-v4-18.0.0_297e85500e8203746d90d8a8094c281a634d25c9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/dy/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/1.6/596daefa34b9ea58eac9677b23325b7e60eae948/gson-1.6.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="596daefa34b9ea58eac9677b23325b7e60eae948">
+        <dex dex="/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/gson-1.6_4a19890783db9972b374d7ef3aa865548abedca9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/dy/AndroidStudioProjects/D3Xmpp-master/app/libs/asmack-android-17-0.8.10.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a7d297ad16399d212106095f51a56b2d6adf702f">
+        <dex dex="/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/transforms/dex/debug/folders/1000/2/asmack-android-17-0.8.10_032fb10e825f1baa40ac93115072a162ab4111c5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/dy/AndroidStudioProjects/D3Xmpp-master/app/libs/universal-image-loader-1.9.3.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a85588bec3e2c4584d593d3f15df1677321bca72">
+        <dex dex="/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/transforms/dex/debug/folders/1000/2/universal-image-loader-1.9.3_96ec525b47d87332fecf7c4b2e8ebbbd769e2d2d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="19ee4fb9acebbeb6fd519c379b016964cd713d04">
+        <dex dex="/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_ce7ea8d555bad5366ab0f97184bbf2cec7c46c85/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/dy/AndroidStudioProjects/D3Xmpp-master/app/libs/BaiduLBS_Android.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6ec0d1b6b9b6d2d96eed8ae9bcd2aabad3461f29">
+        <dex dex="/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/transforms/dex/debug/folders/1000/2/BaiduLBS_Android_47fc834811e40c4f99db8c8d6d55c16c94d22c21/classes.dex" />
+    </item>
+
+</items>

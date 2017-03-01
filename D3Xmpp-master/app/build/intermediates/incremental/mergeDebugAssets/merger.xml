@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/assets"><file name="province_data.xml" path="/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/assets/province_data.xml"/></source><source path="/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/generated/assets/shaders/debug"/></dataSet><dataSet config="debug"><source path="/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/debug/assets"/></dataSet></merger>

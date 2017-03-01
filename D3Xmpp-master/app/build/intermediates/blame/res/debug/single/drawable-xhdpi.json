@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/drawable-xhdpi/ic_launcher.png",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/drawable-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/drawable-xhdpi/icon_camera.png",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/drawable-xhdpi/icon_camera.png"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/drawable-xhdpi/wb_refresh_arrow_reverse.png",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/drawable-xhdpi/wb_refresh_arrow_reverse.png"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/drawable-xhdpi/icon_gallery.png",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/drawable-xhdpi/icon_gallery.png"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/drawable-xhdpi/wb_refresh_arrow.png",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/drawable-xhdpi/wb_refresh_arrow.png"
+    }
+]

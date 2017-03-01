@@ -1,0 +1,58 @@
+[
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/drawable/btn_bg_light.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/drawable/btn_bg_light.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/drawable/gl_rotate_right.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/drawable/gl_rotate_right.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/drawable/gl_rotate_left.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/drawable/gl_rotate_left.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/drawable/shape_red_round.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/drawable/shape_red_round.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/drawable/shape_dot.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/drawable/shape_dot.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/drawable/progress_dialog_style.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/drawable/progress_dialog_style.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/drawable/btn_bg.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/drawable/btn_bg.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/drawable/border.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/drawable/border.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/drawable/input_edittext_bg.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/drawable/input_edittext_bg.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/drawable/shape_black_round.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/drawable/shape_black_round.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/drawable/wheel_val.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/drawable/wheel_val.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/drawable/orders_button.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/drawable/orders_button.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/drawable/shape_white_round.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/drawable/shape_white_round.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/drawable/wheel_bg.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/drawable/wheel_bg.xml"
+    }
+]

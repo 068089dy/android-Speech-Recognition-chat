@@ -1,0 +1,19 @@
+#Wed Feb 08 13:33:11 CST 2017
+renamed.5=classes2.dex
+renamed.4=classes6.dex
+renamed.3=classes4.dex
+renamed.2=classes.dex
+renamed.1=classes5.dex
+renamed.0=classes3.dex
+base.5=/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/transforms/dex/debug/folders/1000/2/universal-image-loader-1.9.3_96ec525b47d87332fecf7c4b2e8ebbbd769e2d2d
+base.4=/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-v4-18.0.0_297e85500e8203746d90d8a8094c281a634d25c9
+base.3=/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/transforms/dex/debug/folders/1000/2/BaiduLBS_Android_47fc834811e40c4f99db8c8d6d55c16c94d22c21
+base.2=/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/transforms/dex/debug/folders/1000/2/asmack-android-17-0.8.10_032fb10e825f1baa40ac93115072a162ab4111c5
+base.1=/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/gson-1.6_4a19890783db9972b374d7ef3aa865548abedca9
+base.0=/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/transforms/dex/debug/folders/1000/2/pinyin4j-2.5.0_2fa925b8b3f1d9a26df26309a0bfd1bdfe3481d4
+file.5=/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/transforms/dex/debug/folders/1000/2/universal-image-loader-1.9.3_96ec525b47d87332fecf7c4b2e8ebbbd769e2d2d/classes.dex
+file.4=/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-v4-18.0.0_297e85500e8203746d90d8a8094c281a634d25c9/classes.dex
+file.3=/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/transforms/dex/debug/folders/1000/2/BaiduLBS_Android_47fc834811e40c4f99db8c8d6d55c16c94d22c21/classes.dex
+file.2=/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/transforms/dex/debug/folders/1000/2/asmack-android-17-0.8.10_032fb10e825f1baa40ac93115072a162ab4111c5/classes.dex
+file.1=/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/gson-1.6_4a19890783db9972b374d7ef3aa865548abedca9/classes.dex
+file.0=/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/transforms/dex/debug/folders/1000/2/pinyin4j-2.5.0_2fa925b8b3f1d9a26df26309a0bfd1bdfe3481d4/classes.dex

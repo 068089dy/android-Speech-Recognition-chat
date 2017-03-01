@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/login_bg.jpg",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/drawable-hdpi/login_bg.jpg"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/round_background.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/drawable-hdpi/round_background.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/img_radio_btn.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/drawable-hdpi/img_radio_btn.xml"
+    }
+]

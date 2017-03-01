@@ -1,0 +1,28 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 17
+    buildToolsVersion "25.0.2"
+
+    defaultConfig {
+        applicationId "com.d3.d3xmpp"
+        minSdkVersion 8
+        targetSdkVersion 21
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:support-v4:18.0.0'
+    compile 'com.google.code.gson:gson:1.6'
+    compile files('libs/BaiduLBS_Android.jar')
+    compile files('libs/asmack-android-17-0.8.10.jar')
+    compile files('libs/pinyin4j-2.5.0.jar')
+    compile files('libs/universal-image-loader-1.9.3.jar')
+}

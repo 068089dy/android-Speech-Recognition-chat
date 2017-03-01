@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/anim/pops.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/anim/pops.xml"
+    },
+    {
+        "merged": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/res/merged/debug/anim/pope.xml",
+        "source": "/home/dy/AndroidStudioProjects/D3Xmpp-master/app/src/main/res/anim/pope.xml"
+    }
+]

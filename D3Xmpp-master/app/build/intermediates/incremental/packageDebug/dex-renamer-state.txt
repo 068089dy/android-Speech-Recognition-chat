@@ -1,0 +1,7 @@
+#Wed Feb 08 13:33:12 CST 2017
+base.0=/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_ce7ea8d555bad5366ab0f97184bbf2cec7c46c85
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_a003b46d7235c699d7f53595a30620b1a5c62f11/classes.dex
+base.1=/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_a003b46d7235c699d7f53595a30620b1a5c62f11
+file.0=/home/dy/AndroidStudioProjects/D3Xmpp-master/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_ce7ea8d555bad5366ab0f97184bbf2cec7c46c85/classes.dex

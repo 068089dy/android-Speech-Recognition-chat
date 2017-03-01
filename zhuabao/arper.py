@@ -83,9 +83,9 @@ def restore_target(gateway_ip,gateway_mac,target_ip,target_mac):
 
 if __name__ == "__main__":
 
-    interface = 'enp2s0'
-    target_ip = '172.18.45.196'
-    gateway_ip = '172.18.45.1'
+    interface = 'wlp3s0'
+    target_ip = '192.168.1.105'
+    gateway_ip = '192.168.1.1'
     packet_count = 1000
 
     #设置嗅探网卡

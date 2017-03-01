@@ -1,12 +1,24 @@
 package com.example.dy.im_practice2.common;
 
 
+import android.graphics.drawable.Drawable;
+import android.media.Image;
+import android.os.Message;
 import android.util.Log;
 
 import org.jivesoftware.smack.ConnectionConfiguration;
+import org.jivesoftware.smack.PacketCollector;
+import org.jivesoftware.smack.SmackConfiguration;
 import org.jivesoftware.smack.XMPPConnection;
+import org.jivesoftware.smack.XMPPException;
+import org.jivesoftware.smack.filter.AndFilter;
+import org.jivesoftware.smack.filter.PacketFilter;
+import org.jivesoftware.smack.filter.PacketIDFilter;
+import org.jivesoftware.smack.filter.PacketTypeFilter;
+import org.jivesoftware.smack.packet.IQ;
 import org.jivesoftware.smack.provider.PrivacyProvider;
 import org.jivesoftware.smack.provider.ProviderManager;
+import org.jivesoftware.smack.util.StringUtils;
 import org.jivesoftware.smackx.GroupChatInvitation;
 import org.jivesoftware.smackx.PrivateDataManager;
 import org.jivesoftware.smackx.bytestreams.socks5.provider.BytestreamsProvider;
@@ -15,6 +27,8 @@ import org.jivesoftware.smackx.packet.LastActivity;
 import org.jivesoftware.smackx.packet.OfflineMessageInfo;
 import org.jivesoftware.smackx.packet.OfflineMessageRequest;
 import org.jivesoftware.smackx.packet.SharedGroupsInfo;
+import org.jivesoftware.smackx.packet.StreamInitiation;
+import org.jivesoftware.smackx.packet.VCard;
 import org.jivesoftware.smackx.provider.AdHocCommandDataProvider;
 import org.jivesoftware.smackx.provider.DataFormProvider;
 import org.jivesoftware.smackx.provider.DelayInformationProvider;
@@ -30,6 +44,14 @@ import org.jivesoftware.smackx.provider.StreamInitiationProvider;
 import org.jivesoftware.smackx.provider.VCardProvider;
 import org.jivesoftware.smackx.provider.XHTMLExtensionProvider;
 import org.jivesoftware.smackx.search.UserSearch;
+
+import java.io.BufferedInputStream;
+import java.io.ByteArrayInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+
+import static org.jivesoftware.smackx.filetransfer.FileTransfer.Error.connection;
 
 /**
  * Created by 068089dy on 2016/10/15.
@@ -67,6 +89,91 @@ public class XMPPUtil {
     public static XMPPConnection getXMPPConnection(String server){
         return getXMPPConnection(server,5222);
     }
+
+    /**
+     * 修改用户头像
+     *
+     * @param connection
+     * @param f
+     * @throws XMPPException
+     * @throws IOException
+
+    public static void changeImage(XMPPConnection connection,File f) throws XMPPException, IOException
+    {
+
+        VCard vcard = new VCard();
+        vcard.load(connection);
+
+        byte[] bytes;
+
+        bytes = getFileBytes(f);
+        String encodedImage = StringUtils.encodeBase64(bytes);
+        vcard.setAvatar(bytes, encodedImage);
+        vcard.setEncodedImage(encodedImage);
+        vcard.setField("PHOTO", "<TYPE>image/jpg</TYPE><BINVAL>"
+                + encodedImage + "</BINVAL>", true);
+
+
+        ByteArrayInputStream bais = new ByteArrayInputStream(
+                vcard.getAvatar());
+        Image image = ImageIO.read(bais);
+        ImageIcon ic = new ImageIcon(image);
+
+
+
+        vcard.save(connection);
+
+    }
+
+    private static byte[] getFileBytes(File file) throws IOException {
+        BufferedInputStream bis = null;
+        try {
+            bis = new BufferedInputStream(new FileInputStream(file));
+            int bytes = (int) file.length();
+            byte[] buffer = new byte[bytes];
+            int readBytes = bis.read(buffer);
+            if (readBytes != buffer.length) {
+                throw new IOException("Entire file not read");
+            }
+            return buffer;
+        } finally {
+            if (bis != null) {
+                bis.close();
+            }
+        }
+    }
+     */
+    /**
+     * 获取用户头像信息
+     *
+     * @param connection
+     * @param user
+     * @return
+
+    public static Drawable getUserImage(XMPPConnection connection, String user) {
+        ByteArrayInputStream bais = null;
+        try {
+            VCard vcard = new VCard();
+            // 加入这句代码，解决No VCard for
+            ProviderManager.getInstance().addIQProvider("vCard", "vcard-temp",
+                    new org.jivesoftware.smackx.provider.VCardProvider());
+
+            vcard.load(connection, user+"@"+connection.getServiceName());
+
+            if (vcard == null || vcard.getAvatar() == null)
+                return null;
+            bais = new ByteArrayInputStream(vcard.getAvatar());
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        if (bais == null)
+            return null;
+        return FormatTools.getInstance().InputStream2Drawable(bais);
+    }
+     */
+
+
 
     public static void configure(ProviderManager pm)
     {

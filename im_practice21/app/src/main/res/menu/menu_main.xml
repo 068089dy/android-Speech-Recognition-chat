@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.dy.myapplication.MainActivity">
+    <item
+        android:id="@+id/add_friend"
+        android:orderInCategory="100"
+        android:title="添加好友"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/Setting"
+        android:orderInCategory="100"
+        android:title="设置"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/system_message"
+        android:orderInCategory="100"
+        android:title="系统消息"
+        app:showAsAction="never" />
+</menu>

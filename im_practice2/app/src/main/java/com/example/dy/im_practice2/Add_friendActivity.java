@@ -168,7 +168,7 @@ public class Add_friendActivity extends AppCompatActivity {
             XMPP_data.connection.sendPacket(p);
             Toast.makeText(Add_friendActivity.this,"向"+userJId+"发送好友请求成功！",Toast.LENGTH_LONG).show();
             Roster roster1 = XMPP_data.connection.getRoster();
-            roster1.createEntry(userJId, userJId.split("@")[0], new String[]{"test1"});//发送添加好友请求，并将该jid用户加入到自己的roster中
+            roster1.createEntry(userJId, userJId.split("@")[0], new String[]{"test1"});//发送添加好友请求，并将该jid用户加入到自己的roster中,组名为”test1“
             System.out.println("add friend ok");
 
         }catch(Exception e){

@@ -18,6 +18,8 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 
+import com.example.dy.im_practice2.common.Storage;
+import com.example.dy.im_practice2.common.XMPPUtil;
 import com.example.dy.im_practice2.listview.ChatActivity_listview.Msg;
 import com.example.dy.im_practice2.listview.MainActivity_listview.friend;
 import com.example.dy.im_practice2.listview.MainActivity_listview.friendAdapter;
@@ -31,6 +33,8 @@ import org.jivesoftware.smack.PacketListener;
 import org.jivesoftware.smack.Roster;
 import org.jivesoftware.smack.RosterEntry;
 import org.jivesoftware.smack.RosterGroup;
+import org.jivesoftware.smack.XMPPConnection;
+import org.jivesoftware.smack.XMPPException;
 import org.jivesoftware.smack.filter.AndFilter;
 import org.jivesoftware.smack.filter.PacketFilter;
 import org.jivesoftware.smack.filter.PacketTypeFilter;
@@ -38,6 +42,9 @@ import org.jivesoftware.smack.packet.Message;
 import org.jivesoftware.smack.packet.Packet;
 import org.jivesoftware.smack.packet.Presence;
 import org.jivesoftware.smackx.OfflineMessageManager;
+import org.jivesoftware.smackx.packet.DelayInfo;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -53,6 +60,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import static com.example.dy.im_practice2.common.Const.KEY_USERNAME;
 
 
 public class MainActivity extends AppCompatActivity implements SwipeRefreshLayout.OnRefreshListener{
@@ -76,6 +84,8 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
                 recive_add_dialog(userjid);
             } else if(data.equals("accept add")){
                 accept_add_dialog(userjid);
+            } else if(data.equals("")){
+
             }
         }
     };
@@ -118,10 +128,12 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
         //添加好友添加监听
         XMPP_data.connection.addPacketListener(listener, filter);
 
+        //获取离线消息
+        offline_message();
+
         Presence presence = new Presence(Presence.Type.available);
         XMPP_data.connection.sendPacket(presence);//设置状态为在线
-        //获取离线消息
-        //offline_message();
+
     }
     //刷新好友列表
     public void onRefresh(){
@@ -155,11 +167,42 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
                     //localBroadcastManager.sendBroadcast(intent);
                     String[] user_name = from.split("@");
                     Log.d(user_name[0],"save in "+body);
-                    save_message(user_name[0],body);
-
+                    new_msg_save(XMPP_data.my_username+user_name[0],body);
                 }
             });
         }
+    }
+
+    /*
+    * 新消息存储
+    * 读取username文件，将其转化为map，将受到的消息添加到map,然后转化为json，存入文件
+    * */
+    private void new_msg_save(String username,String body){
+
+        String jsonstr = read(username);
+        Map map = new HashMap();
+        try {
+            map = toMap(jsonstr);
+        }catch (Exception e){
+
+        }
+        Iterator<Map.Entry<String,String>> it = map.entrySet().iterator();
+        int max_int_keynum = 0;
+        while(it.hasNext()){
+            Map.Entry entry = it.next();
+            String key = entry.getKey().toString();
+            String keynum = key.substring(1);
+            int int_keynum = Integer.parseInt(keynum);
+            if (max_int_keynum<int_keynum){
+                max_int_keynum = int_keynum;
+            }
+        }
+
+        String key = Integer.toString(max_int_keynum+1);
+        map.put("y"+key,body.toString());
+
+
+        save_message(username,tojsonstr(map));
     }
 
     //条件过滤器
@@ -203,7 +246,18 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
                 } else if (presence.getType().equals(Presence.Type.unsubscribed)){
 
                 } else if (presence.getType().equals(Presence.Type.unavailable)) {
+
                     System.out.println(from+"好友下线！");
+                    /*
+                    android.os.Message msg = handler.obtainMessage();
+                    Bundle b = new Bundle();
+                    b.putString("data","loginsuccess");
+                    handler.sendMessage(msg);
+                    /*
+                    if(from.equals(XMPP_data.my_password+'@'+XMPP_data.connection.getServiceName())){
+                        no_connection_dialog();
+                    }
+                    */
                 } else {
                     System.out.println(from+"好友上线！");
                 }
@@ -241,6 +295,8 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
         });
         builder.create().show();
     }
+
+
     /*
     * 接受好友添加dialog
     * */
@@ -263,6 +319,76 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
                 }
             }
         });
+    }
+
+    /*
+    * 被迫下线dialog
+    * */
+    private void no_connection_dialog(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+        builder.setMessage("您被迫下线");
+        builder.setTitle("提示");
+        builder.setPositiveButton("重新登录", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        if(login()){
+                            android.os.Message msg = handler.obtainMessage();
+                            Bundle b = new Bundle();
+                            b.putString("data","loginsuccess");
+                            handler.sendMessage(msg);
+                        }else {
+                            android.os.Message msg = handler.obtainMessage();
+                            Bundle b = new Bundle();
+                            b.putString("data","loginsuccess");
+                            msg.setData(b);
+                            handler.sendMessage(msg);
+                            XMPP_data.connection.disconnect();
+                            finish();
+                        }
+                        login();
+                    }
+                }).start();
+
+            }
+        });
+        builder.setPositiveButton("退出", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                XMPP_data.connection.disconnect();
+                finish();
+            }
+        });
+    }
+
+    /*
+    *
+    * */
+    //用于在线程中登陆的方法
+    private boolean login(){
+        try{
+            android.os.Message msg = handler.obtainMessage();
+            Bundle b = new Bundle();
+            b.putString("data", "start");
+            msg.setData(b);
+            handler.sendMessage(msg); // 向Handler发送消息,更新UI
+            Log.d("login","start!");
+            XMPPConnection connection = XMPPUtil.getXMPPConnection(XMPP_data.my_loginserver);
+            if(connection == null){
+                throw new Exception("connection error!");
+            }
+
+            connection.login(XMPP_data.my_username,XMPP_data.my_password);
+            //DataWarehouse.setXMPPConnection(this,connection);
+            XMPP_data.connection = connection;
+
+        }catch(Exception e){
+            e.printStackTrace();
+            return false;
+        }
+        return true;
     }
 
     //添加好友
@@ -308,6 +434,45 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
         Presence presence = new Presence(Presence.Type.available);
         XMPP_data.connection.sendPacket(presence);//设置状态为在线
     }
+    /*
+    public void receiveOfflineMessage(){
+        OfflineMessageManager offlineManager = new OfflineMessageManager(XMPP_data.connection);
+        try {
+            Iterator<Message> it = offlineManager.getMessages();
+//			 System.out.println(offlineManager.supportsFlexibleRetrieval());
+            Map<String, ArrayList<Message>> offlineMsgs = new HashMap<String, ArrayList<Message>>();
+            while (it.hasNext()) {
+                Message message = it.next();
+                String fromJID = message.getFrom();
+                DelayInfo timestamp = (DelayInfo) message.getExtension(
+                        "delay", "urn:xmpp:delay");
+                if (timestamp == null)
+                    timestamp = (DelayInfo) message.getExtension("x",
+                            "jabber:x:delay");
+                long ts;
+                if (timestamp != null)
+                    ts = timestamp.getStamp().getTime();
+                else
+                    ts = System.currentTimeMillis();
+                String messageBody = message.getBody();
+                addChatMessageToDB(fromJID, mAccount, ChatColum.INCOMING, ts,
+                        ChatColum.TEXT, messageBody,ChatColum.UN_READ, message.getPacketID());
+                System.out
+                        .println("收到离线消息, Received from 【" + message.getFrom()
+                                + "】 message: " + message.getBody());
+            }
+
+            offlineManager.deleteMessages();
+
+        } catch (XMPPException e) {
+            e.printStackTrace();
+        }
+    }
+*/
+
+    /*
+    * 初始化好友数据
+    * */
     private void initdata(){
         Roster roster = XMPP_data.connection.getRoster();
         Collection<RosterGroup> entriesGroup = roster.getGroups();
@@ -335,9 +500,32 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
                 }
             }
         }
+/*
+        Collection<RosterEntry> entries = null;
+
+        for (RosterEntry entry : entries) {
+            if(entry.getName()!=null) {
+                Log.d("name:", entry.getName());
+                friend user = new friend(entry.getName(), R.drawable.head_logo);
+                friendList.add(user);
+                //msg_map.put(user.getName(),null);
+                Iterator<friend> it = friendList.iterator();
+                if (friendList.size() == 0) {
+                    friendList.add(user);
+                    while (it.hasNext()) {
+
+                        if (!entry.getName().equals(it.next().getName())) {
+                            friendList.add(user);
+                            //msg_map.put(user.getName(),null);
+                        }
+                    }
+                }
+            }
+        }
+        */
     }
     /*
-    * 给filename文件中添加“/n”+data
+    * 给filename文件中写入data
     * */
     public void save_message(String filename,String data){
         Log.d("writefile","start");
@@ -345,11 +533,11 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
         BufferedWriter writer = null;
         try{
 
-            String str = read(filename);
+            //String str = read(filename);
             out = openFileOutput(filename,MODE_PRIVATE);
             writer = new BufferedWriter(new OutputStreamWriter(out));
 
-            writer.write(str+"\n"+data);
+            writer.write(data);
         }catch(Exception e){
 
         }finally {
@@ -393,6 +581,55 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
             }
         }
         return context.toString();
+    }
+    /*
+    * 将json字符串转化为map
+    * */
+    public Map toMap(String jsonString) throws JSONException {
+
+        JSONObject jsonObject = new JSONObject(jsonString);
+
+        Map result = new HashMap();
+        Iterator iterator = jsonObject.keys();
+        String key = null;
+        String value = null;
+
+        while (iterator.hasNext()) {
+
+            key = (String) iterator.next();
+            value = jsonObject.getString(key);
+            result.put(key, value);
+            //System.out.println("key:"+key+" "+"value"+value);
+
+        }
+        return result;
+
+    }
+    /*
+    * 将map妆化为json字符串
+    * */
+    public String tojsonstr(Map map){
+        //Map result = new HashMap();
+        Iterator<Map.Entry<String,String>> iterator = map.entrySet().iterator();
+        String key = null;
+        String value = null;
+        String jsonstr = null;
+        while (iterator.hasNext()) {
+            Map.Entry entry = iterator.next();
+            key = entry.getKey().toString();
+            value = map.get(key).toString();
+            //result.put(key, value);
+            System.out.println("key:"+key+" "+"value:"+value);
+            String jsonstr1 = "\""+key+"\""+":"+"\""+value+"\"";
+            if(jsonstr==null) {
+                jsonstr = jsonstr1;
+            }else{
+                jsonstr = jsonstr + "," + jsonstr1;
+            }
+        }
+        jsonstr = "{"+jsonstr+"}";
+        System.out.println(jsonstr);
+        return jsonstr;
     }
 
     @Override

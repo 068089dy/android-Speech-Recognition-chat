@@ -108,6 +108,8 @@ public class loginactivity extends AppCompatActivity implements Const {
             //DataWarehouse.setXMPPConnection(this,connection);
             XMPP_data.connection = connection;
             XMPP_data.my_username = Storage.getString(this,KEY_USERNAME);
+            XMPP_data.my_loginserver = Storage.getString(this,KEY_LOGIN_SERVER);
+            XMPP_data.my_password = Storage.getString(this,KEY_PASSWD);
 
         }catch(Exception e){
             e.printStackTrace();

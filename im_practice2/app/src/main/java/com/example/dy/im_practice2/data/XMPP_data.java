@@ -9,5 +9,7 @@ import org.jivesoftware.smack.XMPPConnection;
 public class XMPP_data {
     public static XMPPConnection connection;
     public static String my_username;
+    public static String my_password;
+    public static String my_loginserver;
 
 }

@@ -26,6 +26,10 @@ java服务器
 
 添加好友...试验
 
+#### 4.group_demo6
+
+群聊demo
+
 ## 2.聊天界面
 ### 1 wechatpractice
 

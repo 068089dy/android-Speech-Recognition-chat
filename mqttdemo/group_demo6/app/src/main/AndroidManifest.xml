@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.dy.group_demo6">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="家庭组" />
+        <activity
+            android:name=".activity.loginActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.CreateRoomActivity"
+            android:label="创建房间" />
+        <activity
+            android:name=".activity.chatActivity"
+            android:label="会话" />
+        <activity
+            android:name=".activity.JoinActivity"
+            android:label="加入房间" />
+        <activity android:name=".activity.roomUserActivity" />
+        <activity
+            android:name=".activity.deviceActivity"
+            android:label="设备" />
+        <activity
+            android:name=".activity.roomActivity"
+            android:label="房间信息" />
+        <activity
+            android:name=".activity.Control.fanActivity"
+            android:label="风扇" />
+        <activity
+            android:name=".activity.Control.buldActivity"
+            android:label="灯泡" />
+        <activity
+            android:name=".activity.Control.airconditionActivity"
+            android:label="空调" />
+        <activity
+            android:name=".activity.Control.tandhsensorActivity"
+            android:label="传感器" />
+        <activity android:name=".activity.signupActivity"
+            android:label="注册"></activity>
+    </application>
+
+</manifest>

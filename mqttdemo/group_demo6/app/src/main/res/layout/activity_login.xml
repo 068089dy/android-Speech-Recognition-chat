@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.example.dy.group_demo6.activity.loginActivity">
+    <LinearLayout
+        android:id="@+id/activity_login"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+
+        >
+
+
+        <!--垂直方向三分之一-->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="2">
+
+            <com.example.dy.group_demo6.view.CircleImageView
+                android:layout_height="100dp"
+                android:layout_width="100dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/head_logo"/>
+
+        </FrameLayout>
+        <!--垂直方向2/3-->
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+
+            <EditText
+                android:id="@+id/edittext_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="user"
+                android:text="user"
+                />
+            <EditText
+                android:id="@+id/edittext_passwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="password"
+                android:text="123456"
+                android:password="true"
+                />
+            <!--<EditText
+                android:id="@+id/server"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="115.28.142.203"
+                android:hint="server"
+                />
+            <EditText
+                android:id="@+id/mqttserver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="tcp://iot.celitea.cn:1883"
+                android:hint="mqttserver"
+                />-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/signin"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="sign in"
+                    android:onClick="onClick_Login"/>
+                <!--<ProgressBar
+                    android:id="@+id/login_bar"
+                    android:gravity="center_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>-->
+            </RelativeLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+                <!--
+                <CheckBox
+                    android:id="@+id/save_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="记住密码"
+                    />
+                <CheckBox
+                    android:id="@+id/auto_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="自动登录"
+                    android:layout_gravity="right"
+                    />
+                    -->
+                <Button
+                    android:id="@+id/button_register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|bottom"
+                    android:layout_marginBottom="10dp"
+                    android:onClick="onClick_Register"
+                    android:text="注册"
+                    />
+
+            </FrameLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -31,13 +31,11 @@
 
 安卓聊天界面2
 
-~
-## 1.后端方案
-### 方案1（socket）
-#### 1.server
-java服务器
+~## 1.后端方案~
+~### 方案1（socket）~
+~#### 1.server~
+~java服务器~
 
-#### 2.MyApplication3
+~#### 2.MyApplication3~
 
-安卓socket+语音识别
-~
+~安卓socket+语音识别~
